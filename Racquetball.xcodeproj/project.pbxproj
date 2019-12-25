@@ -11,7 +11,7 @@
 		FBBC0C3C23AB578400C22A12 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBC0C3A23AB578400C22A12 /* Interface.storyboard */; };
 		FBBC0C3E23AB578800C22A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBC0C3D23AB578800C22A12 /* Assets.xcassets */; };
 		FBBC0C4523AB578800C22A12 /* Racquetball WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FBBC0C4423AB578800C22A12 /* Racquetball WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FBBC0C4A23AB578800C22A12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4923AB578800C22A12 /* ContentView.swift */; };
+		FBBC0C4A23AB578800C22A12 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4923AB578800C22A12 /* MatchView.swift */; };
 		FBBC0C4C23AB578800C22A12 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4B23AB578800C22A12 /* HostingController.swift */; };
 		FBBC0C4E23AB578800C22A12 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4D23AB578800C22A12 /* ExtensionDelegate.swift */; };
 		FBBC0C5023AB578800C22A12 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4F23AB578800C22A12 /* ComplicationController.swift */; };
@@ -69,7 +69,7 @@
 		FBBC0C3D23AB578800C22A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBC0C3F23AB578800C22A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBBC0C4423AB578800C22A12 /* Racquetball WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Racquetball WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBBC0C4923AB578800C22A12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FBBC0C4923AB578800C22A12 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		FBBC0C4B23AB578800C22A12 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		FBBC0C4D23AB578800C22A12 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FBBC0C4F23AB578800C22A12 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FBBC0C6423AB5CD400C22A12 /* Match.swift */,
-				FBBC0C4923AB578800C22A12 /* ContentView.swift */,
+				FBBC0C4923AB578800C22A12 /* MatchView.swift */,
 				FBBC0C4B23AB578800C22A12 /* HostingController.swift */,
 				FBBC0C4D23AB578800C22A12 /* ExtensionDelegate.swift */,
 				FBBC0C4F23AB578800C22A12 /* ComplicationController.swift */,
@@ -272,7 +272,7 @@
 			files = (
 				FBBC0C4C23AB578800C22A12 /* HostingController.swift in Sources */,
 				FBBC0C5023AB578800C22A12 /* ComplicationController.swift in Sources */,
-				FBBC0C4A23AB578800C22A12 /* ContentView.swift in Sources */,
+				FBBC0C4A23AB578800C22A12 /* MatchView.swift in Sources */,
 				FBBC0C6523AB5CD400C22A12 /* Match.swift in Sources */,
 				FBBC0C4E23AB578800C22A12 /* ExtensionDelegate.swift in Sources */,
 			);

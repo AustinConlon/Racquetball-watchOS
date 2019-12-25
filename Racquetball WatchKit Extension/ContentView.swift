@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MatchView.swift
 //  Racquetball WatchKit Extension
 //
 //  Created by Austin Conlon on 12/18/19.
@@ -8,14 +8,21 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MatchView: View {
     @State var match = Match()
     
     var body: some View {
         VStack {
-            Text("Points")
+            HStack {
+                Text("Yourself")
+                    .foregroundColor(match.server == Team.one ? .blue : .primary)
+                Text("Opponent")
+                    .foregroundColor(match.server == Team.two ? .blue : .primary)
+            }
+
+            Divider()
             
-            HStack() {
+            HStack {
                 Group {
                     Button(action: {
                         self.match.winRally(for: Team.one)
@@ -35,28 +42,22 @@ struct ContentView: View {
                 }
             }
                 
-            Text("Points")
+            Text("Games")
             
-            HStack() {
+            HStack {
                 Group {
-                    Button(action: {
-                        self.match.winRally(for: Team.one)
-                    }) {
-                        Image(systemName: "\(match.teamGameScores[0]).square")
-                        .font(.largeTitle)
-                    }
+                    Image(systemName: "\(match.teamMatchScores[0]).square")
+                    .font(.largeTitle)
                 }
+                .padding(.horizontal)
                 
                 Group {
-                    Button(action: {
-                        self.match.winRally(for: Team.two)
-                    }) {
-                        Image(systemName: "\(match.teamGameScores[1]).square")
-                        .font(.largeTitle)
-                    }
+                    Image(systemName: "\(match.teamMatchScores[1]).square")
+                    .font(.largeTitle)
                 }
+                .padding(.horizontal)
             }
-            .navigationBarTitle(match.server == Team.one ? "You Serve" : "You Receive")
+            .navigationBarTitle(match.server == Team.one ? "You Serve" : "You Return")
         }
     }
 }
@@ -64,14 +65,14 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
+            MatchView()
             .previewDevice("Apple Watch Series 5 - 44mm")
-            ContentView()
-            .previewDevice("Apple Watch Series 5 - 40mm")
-            ContentView()
-            .previewDevice("Apple Watch Series 3 - 42mm")
-            ContentView()
-            .previewDevice("Apple Watch Series 3 - 38mm")
+//            MatchView()
+//            .previewDevice("Apple Watch Series 5 - 40mm")
+//            ContentView()
+//            .previewDevice("Apple Watch Series 3 - 42mm")
+//            ContentView()
+//            .previewDevice("Apple Watch Series 3 - 38mm")
         }
     }
 }
