@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB53ADC623B371FD00F4CB25 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4923AB578800C22A12 /* MatchView.swift */; };
 		FBBC0C3623AB578400C22A12 /* Racquetball WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FBBC0C3523AB578400C22A12 /* Racquetball WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FBBC0C3C23AB578400C22A12 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBC0C3A23AB578400C22A12 /* Interface.storyboard */; };
 		FBBC0C3E23AB578800C22A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBC0C3D23AB578800C22A12 /* Assets.xcassets */; };
 		FBBC0C4523AB578800C22A12 /* Racquetball WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FBBC0C4423AB578800C22A12 /* Racquetball WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FBBC0C4A23AB578800C22A12 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4923AB578800C22A12 /* MatchView.swift */; };
 		FBBC0C4C23AB578800C22A12 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4B23AB578800C22A12 /* HostingController.swift */; };
 		FBBC0C4E23AB578800C22A12 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4D23AB578800C22A12 /* ExtensionDelegate.swift */; };
 		FBBC0C5023AB578800C22A12 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4F23AB578800C22A12 /* ComplicationController.swift */; };
@@ -270,9 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB53ADC623B371FD00F4CB25 /* MatchView.swift in Sources */,
 				FBBC0C4C23AB578800C22A12 /* HostingController.swift in Sources */,
 				FBBC0C5023AB578800C22A12 /* ComplicationController.swift in Sources */,
-				FBBC0C4A23AB578800C22A12 /* MatchView.swift in Sources */,
 				FBBC0C6523AB5CD400C22A12 /* Match.swift in Sources */,
 				FBBC0C4E23AB578800C22A12 /* ExtensionDelegate.swift in Sources */,
 			);
