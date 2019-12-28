@@ -20,7 +20,8 @@ struct Match {
     let teamOne = Team.one
     let teamTwo = Team.two
     
-    let minimumPointsToWinGame = 15
+    var minimumPointsToWinGame = 15
+    
     /// Best-of three series of games in match.
     let minimumGamesToWinMatch = 2
     
@@ -28,7 +29,8 @@ struct Match {
     
     var teamMatchScores = [0, 0] {
         didSet {
-            teamGameScores = [0, 0]
+            if winner == nil { teamGameScores = [0, 0] }
+            if teamMatchScores == [1, 1] { minimumPointsToWinGame = 11 }
         }
     }
     
@@ -86,11 +88,9 @@ struct Match {
     mutating func checkMatchWinCondition(for team: Team) {
         switch team {
         case .one:
-            if teamMatchScores[0] >= minimumPointsToWinGame { incrementMatchScore(for: team) }
-            winner = team
+            if teamMatchScores[0] >= minimumGamesToWinMatch { winner = team }
         case .two:
-            if teamMatchScores[1] >= minimumPointsToWinGame { incrementMatchScore(for: team) }
-            winner = team
+            if teamMatchScores[1] >= minimumGamesToWinMatch { winner = team }
         }
     }
 }
