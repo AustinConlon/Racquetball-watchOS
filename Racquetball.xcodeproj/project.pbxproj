@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB3C84DB2550D229009437C8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3C84DA2550D229009437C8 /* CloudKit.framework */; };
+		FB3C84E62550E055009437C8 /* CloudController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3C84E52550E055009437C8 /* CloudController.swift */; };
 		FB53ADC623B371FD00F4CB25 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC0C4923AB578800C22A12 /* MatchView.swift */; };
 		FBBC0C3623AB578400C22A12 /* Racquetball WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FBBC0C3523AB578400C22A12 /* Racquetball WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FBBC0C3C23AB578400C22A12 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBC0C3A23AB578400C22A12 /* Interface.storyboard */; };
@@ -63,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FB3C84D52550D21E009437C8 /* Racquetball WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Racquetball WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		FB3C84DA2550D229009437C8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		FB3C84E52550E055009437C8 /* CloudController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudController.swift; sourceTree = "<group>"; };
 		FBBC0C3123AB578300C22A12 /* Racquetball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racquetball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBC0C3523AB578400C22A12 /* Racquetball WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racquetball WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBC0C3B23AB578400C22A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -84,18 +89,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3C84DB2550D229009437C8 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB3C84D92550D229009437C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB3C84DA2550D229009437C8 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FBBC0C2A23AB578300C22A12 = {
 			isa = PBXGroup;
 			children = (
 				FBBC0C3923AB578400C22A12 /* Racquetball WatchKit App */,
 				FBBC0C4823AB578800C22A12 /* Racquetball WatchKit Extension */,
 				FBBC0C3223AB578300C22A12 /* Products */,
+				FB3C84D92550D229009437C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,11 +137,13 @@
 		FBBC0C4823AB578800C22A12 /* Racquetball WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FB3C84D52550D21E009437C8 /* Racquetball WatchKit Extension.entitlements */,
 				FBBC0C6423AB5CD400C22A12 /* Match.swift */,
 				FBBC0C4923AB578800C22A12 /* MatchView.swift */,
 				FBBC0C4B23AB578800C22A12 /* HostingController.swift */,
 				FBBC0C4D23AB578800C22A12 /* ExtensionDelegate.swift */,
 				FBBC0C4F23AB578800C22A12 /* ComplicationController.swift */,
+				FB3C84E52550E055009437C8 /* CloudController.swift */,
 				FBBC0C5123AB578A00C22A12 /* Assets.xcassets */,
 				FBBC0C5623AB578A00C22A12 /* Info.plist */,
 				FBBC0C5323AB578A00C22A12 /* Preview Content */,
@@ -203,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Austin Conlon";
 				TargetAttributes = {
 					FBBC0C3023AB578300C22A12 = {
@@ -271,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB53ADC623B371FD00F4CB25 /* MatchView.swift in Sources */,
+				FB3C84E62550E055009437C8 /* CloudController.swift in Sources */,
 				FBBC0C4C23AB578800C22A12 /* HostingController.swift in Sources */,
 				FBBC0C5023AB578800C22A12 /* ComplicationController.swift in Sources */,
 				FBBC0C6523AB5CD400C22A12 /* Match.swift in Sources */,
@@ -331,6 +349,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -390,6 +409,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -421,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Racquetball WatchKit Extension/Racquetball WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Racquetball WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = AV84QJNZ49;
@@ -445,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Racquetball WatchKit Extension/Racquetball WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Racquetball WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = AV84QJNZ49;

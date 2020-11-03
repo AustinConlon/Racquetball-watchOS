@@ -12,18 +12,18 @@ enum Format {
     case singles, doubles
 }
 
-enum Team: CaseIterable {
+enum Team: Int, CaseIterable, Codable {
     case one, two
 }
 
-struct Match {
-    let teamOne = Team.one
-    let teamTwo = Team.two
+class Match: Codable {
+    var teamOne = Team.one
+    var teamTwo = Team.two
     
     var minimumPointsToWinGame = 15
     
     /// Best-of three series of games in match.
-    let minimumGamesToWinMatch = 2
+    var minimumGamesToWinMatch = 2
     
     var teamGameScores = [0, 0]
     
@@ -38,7 +38,7 @@ struct Match {
     
     var winner: Team?
     
-    mutating func switchServer() {
+    func switchServer() {
         switch server! {
         case .one:
             server = .two
@@ -47,7 +47,7 @@ struct Match {
         }
     }
     
-    mutating func winRally(for team: Team) {
+    func winRally(for team: Team) {
         if team == server {
             incrementGameScore(for: team)
             checkGameWinCondition(for: team)
@@ -58,7 +58,7 @@ struct Match {
         checkMatchWinCondition(for: team)
     }
     
-    mutating func incrementGameScore(for team: Team) {
+    func incrementGameScore(for team: Team) {
         switch team {
         case .one:
             teamGameScores[0] += 1
@@ -67,7 +67,7 @@ struct Match {
         }
     }
     
-    mutating func incrementMatchScore(for team: Team) {
+    func incrementMatchScore(for team: Team) {
         switch team {
         case .one:
             teamMatchScores[0] += 1
@@ -76,7 +76,7 @@ struct Match {
         }
     }
     
-    mutating func checkGameWinCondition(for team: Team) {
+    func checkGameWinCondition(for team: Team) {
         switch team {
         case .one:
             if teamGameScores[0] >= minimumPointsToWinGame { incrementMatchScore(for: team) }
@@ -85,7 +85,7 @@ struct Match {
         }
     }
     
-    mutating func checkMatchWinCondition(for team: Team) {
+    func checkMatchWinCondition(for team: Team) {
         switch team {
         case .one:
             if teamMatchScores[0] >= minimumGamesToWinMatch { winner = team }

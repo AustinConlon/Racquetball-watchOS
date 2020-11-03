@@ -82,13 +82,9 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MatchView()
-            .previewDevice("Apple Watch Series 5 - 44mm")
+            .previewDevice("Apple Watch Series 6 - 44mm")
             MatchView()
-            .previewDevice("Apple Watch Series 5 - 40mm")
-            MatchView()
-            .previewDevice("Apple Watch Series 3 - 42mm")
-            MatchView()
-            .previewDevice("Apple Watch Series 3 - 38mm")
+            .previewDevice("Apple Watch Series 6 - 40mm")
         }
     }
 }
